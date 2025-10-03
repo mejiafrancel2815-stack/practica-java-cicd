@@ -1,0 +1,26 @@
+name: java CI
+on:
+  push:
+    brannches: [ "main"]
+  pull_request:
+    branches:  [ "main" ]
+
+jobss:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name:Chechkout codigo
+      uses:actions/checkout@v3
+
+    - name: Instalar Java
+      uses: actions/setud-java@v3
+      with:
+        distribution: 'temurin'
+        java-version: '17'
+
+    - name: compilar con javac
+      run: java Main.java
+
+    - name: Ejecutar programa
+      run: java Main
