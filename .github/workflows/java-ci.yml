@@ -1,7 +1,7 @@
 name: java CI
 on:
   push:
-    brannches: [ "main"]
+    branches: [ "main"]
   pull_request:
     branches:  [ "main" ]
 
@@ -10,8 +10,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name:Chechkout codigo
-      uses:actions/checkout@v3
+    - name: Checkout codigo
+      uses: actions/checkout@v3
 
     - name: Instalar Java
       uses: actions/setud-java@v3
