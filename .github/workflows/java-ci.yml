@@ -19,8 +19,17 @@ jobs:
         distribution: 'temurin'
         java-version: '17'
 
+    - name: Listar estructura del proyecto
+      run: |
+        echo "Contenido del directorio:"
+        ls -la
+        echo "Archivos java encontrados:"
+        find . -name "*.java"
+        
     - name: compilar con javac
       run: javac Main.java
-
+      # 0 si esta en src: javac src/Main.java
+      
     - name: Ejecutar programa
       run: java Main
+      # 0 si esta en src: java -cp src Main
