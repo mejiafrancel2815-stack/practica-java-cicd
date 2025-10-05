@@ -1,5 +1,5 @@
 public class Main {
-  public static voin main(String[] args) {
+  public static void main(String[] args) {
     System.out.println("Probando pipeline CI/CD");
   }
 }
